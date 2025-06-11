@@ -15,3 +15,32 @@ function validateForm() {
   document.getElementById("sender-messages").innerText = messages;
   return false;
 } 
+
+let indexBanner = 0;
+
+showBanner();
+
+/// Increment index
+function nextBanner() {
+    indexBanner += 1;
+    showBanner();
+}
+
+function showBanner() {
+    // DOM Banner
+    const listImage = document.getElementsByClassName("about-img");
+
+    // Reset index
+    if (indexBanner > listImage.length - 1) {
+        indexBanner = 0;
+    }
+
+    /// Looping to hide all banner
+    for (let i = 0; i < listImage.length; i++) {
+        listImage[i].style.display = "none";
+    }
+
+    listImage[indexBanner].style.display = "block";
+}
+
+setInterval(nextBanner, 3000);
