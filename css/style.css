@@ -322,6 +322,8 @@ form {
   width: 400px;
   border-radius: 8px;
   background-color: #194a7a;
+  opacity: 0;
+  animation: slideTop 1s ease forwards;
 }
 
 .form-section div{
@@ -330,6 +332,8 @@ form {
   height: 250px;
   border-radius: 8px;
   background-color: #194a7a;
+  opacity: 0;
+  animation: slideTop 1s ease forwards;
 }
 
 .form-section div:hover{
